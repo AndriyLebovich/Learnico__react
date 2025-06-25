@@ -1,0 +1,141 @@
+.testimonials {
+	display: flex;
+	z-index: 2;
+}
+.testimonials__container {
+	display: flex;
+	flex-direction: column;
+	z-index: 2;
+	margin-top: -213px;
+	min-height: 780px;
+	width: 90vw;
+	border-radius: 24px;
+	background: rgb(252, 216, 202);
+	padding: 96px 0px;
+	margin-bottom: -390px;
+}
+.testimonials__title {
+	margin-bottom: 10px;
+}
+.testimonials__sub-title {
+	margin-bottom: 30px;
+	text-align: center;
+}
+.testimonials__text {
+	padding: 30px;
+	margin-bottom: 80px;
+	text-align: center;
+}
+
+/* --- */
+
+.testimonials__coments {
+	position: relative;
+	min-height: 330px;
+	padding: 30px;
+}
+.coments__item {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 70%;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 30px;
+	height: 330px;
+	border-radius: 16px;
+}
+.slider__item {
+	opacity: 0;
+	transition: all 1s ease;
+}
+.slider__item.active {
+	opacity: 1;
+}
+.next {
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+	right: 10px;
+	opacity: 1;
+	height: 50px;
+	z-index: 1;
+	transition: all 0.5s;
+}
+.next:hover {
+	top: 45%;
+	transform: scale(1.2);
+}
+.next:active {
+	transform: scale(0.8);
+}
+.prev {
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+	left: 10px;
+	opacity: 1;
+	height: 50px;
+	z-index: 1;
+	transition: all 0.5s;
+}
+.prev:hover {
+	transform: scale(1.2);
+	top: 45%;
+}
+.prev:active {
+	transform: scale(0.8);
+}
+.coments__text {
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 27px;
+	max-height: 50%;
+	overflow-y: scroll;
+	z-index: 5;
+}
+.coments__autor {
+	display: flex;
+	column-gap: 15px;
+}
+.autor__name {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+}
+.autor__position {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: rgb(107, 114, 128);
+}
+/* --- */
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1080px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 660px) {
+}
+
+@media (max-width: 480px) {
+	.coments__text {
+		height: 40%;
+	}
+	.coments__autor {
+		align-items: center;
+	}
+}
+
+@media (max-width: 360px) {
+}

@@ -1,0 +1,86 @@
+.register {
+	background: rgb(0, 53, 59);
+	padding: 130px 0;
+}
+.register__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0 auto;
+	min-height: 225px;
+	max-width: 700px;
+	color: #fff;
+}
+.register__title {
+	text-align: center;
+	margin-bottom: 30px;
+}
+.register__text {
+	text-align: center;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 27px;
+	margin-bottom: 40px;
+}
+.register__buttons {
+	display: flex;
+	justify-content: center;
+	column-gap: 15px;
+}
+.register__btn-start {
+	text-align: center;
+	padding-top: 10%;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	min-height: 50px;
+	min-width: 135px;
+	border-radius: 8px;
+	background: rgb(34, 164, 90);
+	transition: 0.5s;
+}
+.register__btn-start:hover {
+	transform: scale(1.1);
+	background-color: #000;
+	color: #fff;
+}
+.register__btn-contact {
+	color: #000;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	background-color: #fff;
+	border-radius: 8px;
+	min-height: 50px;
+	min-width: 135px;
+	transition: 0.5s;
+}
+.register__btn-contact:hover {
+	transform: scale(1.1);
+	background-color: #000;
+	color: #fff;
+}
+.popup-contact__links-container {
+	height: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.links-container__item:nth-child(odd) {
+	padding-bottom: 25%;
+	border-bottom: 2px solid #000;
+}
+.links-container__item {
+	font-size: 20px;
+}
+.links-container__item > p {
+	margin-bottom: 30px;
+}
+.links-container__item > a {
+	transition: all 0.5s;
+	font-size: 20px;
+}
+.links-container__item > a:hover {
+	color: #a5a5a5;
+}

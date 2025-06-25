@@ -1,0 +1,163 @@
+.slider__wrap {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90vw;
+}
+
+.slider {
+	position: relative;
+	justify-content: center;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	column-gap: 3%;
+}
+
+.slide {
+	margin: 0 auto;
+	width: 400px;
+	height: 500px;
+	border-radius: 20px;
+	transition: all 1s ease;
+	overflow: hidden;
+	position: relative;
+	border-bottom-right-radius: 0px;
+
+	cursor: pointer;
+}
+
+.slide:hover {
+	transform: scale(1.1);
+}
+.slide:active {
+	transform: scale(0.9);
+}
+
+.slide.active {
+	z-index: 1;
+	opacity: 1;
+}
+
+.slide img {
+	height: 100%;
+}
+
+.slide__label {
+	left: 30px;
+	top: 30px;
+	text-align: center;
+	background-color: #fff;
+	padding: 8px 4px 8px 4px;
+	border-radius: 4px;
+
+	position: absolute;
+	font-weight: bold;
+	width: 40%;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.slide__title {
+	font-size: clamp(18px, 3rem, 48px);
+	font-weight: 400;
+	line-height: 57.6px;
+	color: #fff;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 33.6px;
+	height: 180px;
+	text-wrap: wrap;
+	width: 90%;
+
+	position: absolute;
+	top: 90px;
+	left: 30px;
+}
+
+.slide__price {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 27px;
+	color: #fff;
+
+	position: absolute;
+	top: 180px;
+	left: 30px;
+}
+.icon-button__Trending.left {
+	display: none;
+}
+.icon-button__Trending.right {
+	display: none;
+}
+
+@media (max-width: 1080px) {
+	.slide {
+		position: absolute;
+		opacity: 0;
+		width: 40%;
+	}
+	.icon-button__Trending.left {
+		display: block;
+	}
+	.icon-button__Trending.right {
+		display: block;
+	}
+}
+
+@media (max-width: 660px) {
+	.slide {
+		width: 60vw;
+		height: 400px;
+	}
+	.slide__label {
+		font-size: 10px;
+	}
+}
+/*
+.slider {
+	display: flex;
+	align-items: center;
+	max-width: 1000px;
+}
+
+.slide {
+	height: 500px;
+	width: 200px;
+	border-radius: 10px;
+	overflow: hidden;
+	transition: 3s;
+	position: relative;
+}
+.slide.active {
+	opacity: 1;
+}
+
+.slide img {
+	width: 101%;
+	height: 101%;
+	object-fit: cover;
+	object-position: center -1px;
+}
+
+.slide__info {
+	position: absolute;
+	left: 20px;
+	top: 30px;
+	white-space: nowrap;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.slide__label {
+	font-weight: bold;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.slide__title {
+	font-size: 26px;
+	font-weight: bold;
+}
+*/

@@ -1,0 +1,150 @@
+.blog__items {
+	display: flex;
+	justify-content: space-around;
+	column-gap: 20px;
+	row-gap: 100px;
+	padding: 50px;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 650px;
+	overflow: hidden;
+	transition: all 0.5s;
+}
+.blog__items.active {
+	height: 1300px;
+}
+.blog__item {
+	background-color: #fff;
+	width: 350px;
+	height: 550px;
+	transition: 0.5s;
+	overflow: hidden;
+}
+.blog__item:hover {
+	transform: scale(1.1);
+}
+.blog__item-info {
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 24px;
+}
+.blog__info-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 160px;
+}
+.blog__item-title {
+	max-width: 100px;
+	text-align: center;
+	padding: 4px 8px;
+	border-radius: 4px;
+	background: rgb(170, 222, 168);
+}
+.blog__item-sub-title {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 33.6px;
+}
+.blog__item-text {
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+}
+.blog__item-link {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	transition: 0.5s;
+}
+.blog__item-img > img {
+	width: 110%;
+}
+.blog__item-link > a {
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+.blog__item-link > a:active {
+	transform: scale(0.8);
+}
+
+.blog__btn {
+	margin: 0 auto;
+	height: 50px;
+	width: 50%;
+	border-radius: 8px;
+	background: rgb(255, 255, 255);
+	transition: 0.5s;
+}
+.blog__btn:hover {
+	transform: scale(1.2);
+	background-color: #000;
+	color: #fff;
+}
+
+.link-active > a {
+	line-height: 42px;
+	padding: 0;
+	border: none;
+}
+.link-active > a:hover {
+	color: #9a9898;
+	background: transparent;
+	box-shadow: none;
+}
+.link-active > a:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 2px;
+	width: 0;
+	background: #efeaea;
+	box-shadow:
+		-1px -1px 5px 0px #fff,
+		7px 7px 20px 0px #0003,
+		4px 4px 5px 0px #0002;
+	transition: 400ms ease all;
+}
+.link-active > a:after {
+	right: inherit;
+	top: inherit;
+	left: 0;
+	bottom: 0;
+}
+.link-active > a:hover:after {
+	width: 100%;
+	transition: 800ms ease all;
+}
+
+.blog__link-active > a:after {
+	background-color: #000;
+}
+
+@media (max-width: 480px) {
+	.blog__item {
+		width: 100%;
+	}
+	.blog__item-img {
+		width: 100%;
+	}
+	.blog__item-img > img {
+		width: 100%;
+	}
+	.blog__item-info {
+		width: 100%;
+		height: 68%;
+	}
+	.blog__info-text {
+		height: 70%;
+	}
+}
+
+@media (max-width: 360px) {
+	.blog__item-info {
+		height: 75%;
+	}
+}

@@ -1,0 +1,118 @@
+.benefits__container {
+	margin-bottom: 400px;
+}
+.benefits__top {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.benefits__title {
+	margin-bottom: 10px;
+	background: rgb(252, 216, 202);
+}
+.benefits__sub-title {
+	margin: 0 auto;
+	margin-bottom: 30px;
+	max-width: 690px;
+}
+.benefits__text {
+	margin: 0 auto;
+	margin-bottom: 80px;
+	max-width: 730px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 27px;
+}
+.benefits__points {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-areas: "benefits__left benefits__img benefits__right";
+	margin-bottom: 80px;
+}
+.points__item {
+	text-align: center;
+}
+.points__item:nth-child(even) {
+	margin-bottom: 0;
+}
+.points__item--1 {
+	row-gap: min(15px);
+}
+.benefits__img {
+	margin: 0 96px;
+	grid-area: benefits__img;
+	text-align: center;
+}
+.benefits__btn {
+	margin: 0 auto;
+	position: relative;
+	border-radius: 5px;
+	background: rgb(31, 41, 55);
+	color: #fff;
+	padding: 12px 25px 12px 25px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	transition: 0.5s;
+}
+.benefits__btn:active {
+	transform: scale(0.8);
+}
+.benefits__btn-container {
+	text-align: center;
+}
+
+.points__left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0 auto;
+	row-gap: 15px;
+	padding: 55px 0px;
+	grid-area: benefits__left;
+}
+.points__right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0 auto;
+	row-gap: 15px;
+	padding: 55px 0px;
+	grid-area: benefits__right;
+}
+
+@media (max-width: 1200px) {
+	.benefits__points {
+		margin: 0 auto;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas:
+			"benefits__img benefits__img"
+			"benefits__left benefits__right";
+	}
+	.benefits__img {
+		justify-content: center;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 1080px) {
+}
+
+@media (max-width: 768px) {
+	.benefits__img img {
+		width: 73vw;
+	}
+}
+
+@media (max-width: 660px) {
+}
+
+@media (max-width: 480px) {
+	.benefits__points {
+		margin-bottom: 150px;
+	}
+}
+
+@media (max-width: 360px) {
+}

@@ -1,0 +1,54 @@
+.icon-button {
+	height: 40px;
+	width: 40px;
+	opacity: 1;
+	transition: 1s;
+}
+.icon-button:hover {
+	transform: scale(1.2);
+}
+.icon-button:active {
+	transform: scale(0.8);
+}
+.icon-button.left.disabled,
+.icon-button.right.disabled {
+	pointer-events: none;
+}
+
+.icon-button.right,
+.icon-button.right.disabled {
+	background: url("/public/trending/IconButtons/right.svg") center / 100% 100% no-repeat;
+}
+.icon-button.left,
+.icon-button.left.disabled {
+	background: url("/public/trending/IconButtons/left.svg") center / 100% 100% no-repeat;
+}
+
+/*--- --- --- */
+
+.icon-button__Trending {
+	display: none;
+	height: 40px;
+	width: 40px;
+	opacity: 1;
+	transition: 1s;
+}
+.icon-button__Trending:hover {
+	transform: scale(1.2);
+}
+.icon-button__Trending:active {
+	transform: scale(0.8);
+}
+.icon-button__Trending.left.disabled,
+.icon-button__Trending.right.disabled {
+	pointer-events: none;
+}
+
+.icon-button__Trending.right,
+.icon-button__Trending.right.disabled {
+	background: url("/public/trending/IconButtons/right.svg") center / 100% 100% no-repeat;
+}
+.icon-button__Trending.left,
+.icon-button__Trending.left.disabled {
+	background: url("/public/trending/IconButtons/left.svg") center / 100% 100% no-repeat;
+}
