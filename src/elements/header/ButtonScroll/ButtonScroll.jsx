@@ -1,5 +1,4 @@
 
-/* --- Спитай як це зробити --- */
 import './ButtonScroll.css'
 
 export default function ButtonScroll({coursesRef}) {

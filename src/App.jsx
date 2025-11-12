@@ -29,7 +29,8 @@ export default function App() {
       contactRef={contactRef} 
       coursesRef={coursesRef}
       />
-      <About />
+      <About
+      aboutRef={aboutRef}/>
       <CoursesInfo />
       <Trending 
       coursesRef={coursesRef} 
@@ -37,8 +38,10 @@ export default function App() {
       <Join />
       <Benefits />
       <Testimonials />
-      <Blog />
-      <Register />
+      <Blog 
+      blogRef={blogRef}/>
+      <Register 
+      contactRef={contactRef}/>
       <Footer />
     </>
   )
