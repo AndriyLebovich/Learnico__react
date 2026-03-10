@@ -15,7 +15,7 @@ import ButtonScroll from './ButtonScroll/ButtonScroll';
 export default function Header({coursesRef, homeRef, aboutRef, blogRef, contactRef}) {
 	return (
 		<header className="header">
-			<div className="header__container container">
+			<div ref={homeRef} className="header__container container">
 				<div className="header__inner">
 					<div className="header__top">
 						<div className="header__logo">

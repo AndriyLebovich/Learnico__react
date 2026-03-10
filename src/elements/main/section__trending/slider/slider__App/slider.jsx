@@ -1,6 +1,6 @@
-import './Slider.css'
+import './slider.css'
 import { useState } from 'react'
-import { IconButton, IconButtonTrending } from '../controls-component/arrows'
+import { IconButtonTrending } from '../controls-component/arrows'
 
 export const Slider = ({ data }) => {
 	const [activeId, setActiveId] = useState(0)

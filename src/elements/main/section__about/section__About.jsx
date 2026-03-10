@@ -1,9 +1,9 @@
 import "./section__About.css"
 
-export default function About() {
+export default function About({aboutRef}) {
 	return (
 		<section className="about">
-			<div className="about__container container">
+			<div ref={aboutRef} className="about__container container">
 				<div className="about__title wrapper__title">
 					<title>About us</title>
 				</div>

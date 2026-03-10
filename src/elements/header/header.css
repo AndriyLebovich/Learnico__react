@@ -31,6 +31,12 @@
 .menu__burger {
 	display: none;
 }
+.header__menu-wrapper {
+	z-index: 4;
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+}
 .header__menu {
 	display: flex;
 	align-items: center;
@@ -41,6 +47,7 @@
 	padding: 0 20px;
 	border-radius: 40px;
 	box-shadow: 0 5px 20px rgba(3, 6, 20, 0.8);
+	background-color: #000;
 }
 
 .header__menu-item {
@@ -87,7 +94,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 260px;
+	width: 240px;
 	padding-left: 20px;
 }
 .btn__basket-wrapper {
@@ -218,10 +225,23 @@
 	.adaptive-text__big-title {
 		font-size: calc(20px + (36 + 36 * 0.7) * ((100vw - 320px) / 1440));
 	}
+	.header__top{
+		position: fixed;
+		padding: 30px;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
 	.header__logo {
 		display: none;
 	}
 
+	/*
+	.menu-burger__wrapper{
+		position: fixed;
+		z-index: 6;
+	}
+	*/ /*To compleate burger-menu*/
 	.menu__burger {
 		z-index: 6;
 		display: block;
@@ -330,6 +350,7 @@
 		height: 80%;
 		gap: 0;
 		padding: 20px;
+		background-color: rgba(0, 0, 0, 0);
 	}
 	.header__menu-indicator {
 		opacity: 0;

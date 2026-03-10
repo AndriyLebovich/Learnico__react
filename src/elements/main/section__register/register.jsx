@@ -2,11 +2,11 @@
 import ButtonRegister from '../../header/ButtonRegister/ButtonRegister'
 import './register.css'
 
-export default function Register() {
+export default function Register({contactRef}) {
 	return (
 		<>
 			<section className="register">
-				<div className="register__container container">
+				<div ref={contactRef} className="register__container container">
 					<div className="register__title wrapper__sub-title">
 						<title>Start learning today</title>
 					</div>
