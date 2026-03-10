@@ -1,6 +1,7 @@
 
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 const HeaderMenu = ({coursesRef, homeRef, aboutRef, blogRef, contactRef}) => {
 
@@ -12,6 +13,15 @@ const HeaderMenu = ({coursesRef, homeRef, aboutRef, blogRef, contactRef}) => {
 
 	const [activeIndex, setActiveIndex] = useState(null);
 	const indicatorRef = useRef(null);
+
+	useEffect(() => {
+		if(state){
+			disableBodyScroll(document.body)
+		} else {
+			enableBodyScroll(document.body)
+		}
+		return () => enableBodyScroll(document.body)
+	}, [state]); /*prohibiting page scrolling when burger-menu is open*/
 
 
 	const menuItems = [
@@ -44,20 +54,32 @@ const scrollToSection = (ref) => {
 		const indicator = indicatorRef.current;
 
 		if (indicator && element) {
+			indicator.style.transition = "none";
 			indicator.style.width = `${element.offsetWidth}px`;
 			indicator.style.left = `${element.offsetLeft}px`;
 			indicator.style.backgroundColor = element.getAttribute("active-color");
 		}
 
+		setTimeout(() => {
+			indicator.style.transition = "opacity 0.5s ease";
+			indicator.style.opacity = "1";
+
+			setTimeout(() => {
+				indicator.style.opacity = "0";
+			}, 3000);
+		}, 50);
+
 		setActiveIndex(index);
-	};
+	}; /*indicator to menu-item*/
 
 
 	return (
 		<>
+		<div className="menu-burger__wrapper">
 			<div onClick={handleClick} className={state ? 'menu__burger_active' : 'menu__burger'}>
 				<span></span>
 			</div>
+		</div>
 			<div className={state ? 'header__menu-wrapper_active' : 'header__menu-wrapper'}>
 				<div className="header__menu">
 					<span className="header__menu-indicator" ref={indicatorRef}></span>
